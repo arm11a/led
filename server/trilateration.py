@@ -14,7 +14,7 @@ class Trilateration:
         self._P2 = P2
         self._P3 = P3
     
-    def calculate(self, DistA, DistB, DistC):
+    def Calculate(self, DistA, DistB, DistC):
         #from wikipedia
         #transform to get circle 1 at origin
         #transform to get circle 2 on x axis
@@ -30,7 +30,7 @@ class Trilateration:
         x = (pow(DistA,2) - pow(DistB,2) + pow(d,2))/(2*d)
         y = ((pow(DistA,2) - pow(DistC,2) + pow(i,2) + pow(j,2))/(2*j)) - ((i/j)*x)
         
-        print x, y
+        #print x, y
         
         # only one case shown here
         #z = sqrt(pow(DistA,2) - pow(x,2) - pow(y,2))
@@ -43,3 +43,4 @@ class Trilateration:
         #lat = math.degrees(math.asin(triPt[2] / earthR))
         #lon = math.degrees(math.atan2(triPt[1],triPt[0]))
         return x,y
+
